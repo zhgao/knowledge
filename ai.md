@@ -1,3 +1,5 @@
+##BM25
+
 ### How it works
 
 BM25 ranks documents based on:
@@ -26,6 +28,8 @@ BM25 will favor documents containing:
 - “delay”
 
 Even if the meaning is similar but words differ, it may miss them.
+
+##FAISS
 
 **Type:** Vector similarity search (semantic retrieval)  
 **Developed by:** Meta (Facebook AI)
