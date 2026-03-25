@@ -1,33 +1,31 @@
-BM25
-	Type: Lexical (keyword-based) retrieval
-	Used in: Traditional search engines (Elasticsearch, Lucene)
+### How it works
 
-	How it works
+BM25 ranks documents based on:
 
-		BM25 ranks documents based on:
+- Term frequency (how often a word appears)
+- Inverse document frequency (how rare the word is)
+- Document length normalization
 
-			Term frequency (how often a word appears)
-			Inverse document frequency (how rare the word is)
-			Document length normalization
+👉 It matches **exact words** between query and documents.
 
-		👉 It matches exact words between query and documents.
+### Key characteristics
 
-		Key characteristics
-			No embeddings
-			No semantic understanding
-			Fast and lightweight
-			Works best for exact keyword matching
-	Example
+- No embeddings
+- No semantic understanding
+- Fast and lightweight
+- Works best for exact keyword matching
 
-		Query: "bank transfer delay"
+### Example
 
-		BM25 will favor documents containing:
+Query: `"bank transfer delay"`
 
-		“bank”
-		“transfer”
-		“delay”
+BM25 will favor documents containing:
 
-	Even if the meaning is similar but words differ, it may miss them.
+- “bank”
+- “transfer”
+- “delay”
+
+Even if the meaning is similar but words differ, it may miss them.
 
 **Type:** Vector similarity search (semantic retrieval)  
 **Developed by:** Meta (Facebook AI)
