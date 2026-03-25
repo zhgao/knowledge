@@ -28,3 +28,34 @@ BM25
 		“delay”
 
 	Even if the meaning is similar but words differ, it may miss them.
+
+**Type:** Vector similarity search (semantic retrieval)  
+**Developed by:** Meta (Facebook AI)
+
+### How it works
+
+- Text is converted into **embeddings** using models (e.g., BERT, OpenAI embeddings)
+- FAISS indexes these vectors
+- It retrieves documents based on **vector similarity** (cosine similarity / L2 distance)
+
+👉 It matches **meaning**, not just words.
+
+### Key characteristics
+
+- Semantic understanding
+- Handles synonyms and paraphrasing
+- Requires embedding model
+- Highly scalable for large datasets
+- Faster approximate nearest neighbor (ANN) search
+
+### Example
+
+Query: `"bank transfer delay"`
+
+FAISS may retrieve documents containing:
+
+- “payment not received”
+- “transaction pending”
+- “funds not credited”
+
+Even if exact words don’t match.
